@@ -1,0 +1,13 @@
+.score-time {
+position: relative;
+top: -45px;
+left: 55%;
+}
+.score-time h5, h6{
+    text-align: center;
+}
+
+.score {
+    position: relative;
+    left: 10%;
+}

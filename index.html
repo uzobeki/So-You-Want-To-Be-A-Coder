@@ -22,20 +22,20 @@
         </div>
     </div>
 
-    <!-- Scorecard and timer  -->
+    <!-- Scorecard-->
     <div class="container score-time">
         <div class="row">
-            <div class="col-sm-3 score">
+            <div class="col-sm-3">
                 <div class="card w-50">
                     <div class="card-body">
                         <h5 class="card-title">Score</h5>
-                        <h6 class="card-text">0</h6> 
+                        <h6 class="card-text"><span id="score">0</span></h6> 
                     </div>
                 </div>
             </div>    
             <div class="col-sm-3">
                 <!--Timer Card here-->
-                <div class="card w-50">
+                <div class="card w-50 time">
                     <div class="card-body">
                       <h5 class="card-title">Time</h5>
                       <h6 class="card-text"><span id="timer">90</span></h6>
@@ -44,14 +44,14 @@
             </div>
         </div>
     </div>
-
-    <div class="container">
+    <!-- Quiz Start -->
+    <div class="container" id="start">
         <div class="row">
             <div class="col-md-8">
                 <div class="card w-100">
-                    <div class="card-body" id="start">
+                    <div class="card-body" >
                         <h5 class="card-title">Test Your Knowledge!</h5>
-                        <p class="card-text">Welcome promising coder! So you want to be a coder, huh? Today we will test your know knowledge on Javscript basics. You will have 90 seconds to answer as many questions as possible. For every question you get wrong, your time will decrease by 5 seconds. Are you the next Javascript Jedi?
+                        <p class="card-text">Welcome promising coder! So you want to be a coder, huh? Today we will test your know knowledge on coding basics. You will have 90 seconds to answer as many questions as possible. For every question you get wrong, your time will decrease by 10 seconds and your score by 5. So, are you a Javascript Jedi? An HTML Hero?! A CSS Champion?!!!<br> We'll see...
                         </p>
                         <a class="btn btn-primary" id="start-button">Start Quiz</a>
                     </div>
@@ -61,36 +61,20 @@
     </div>
 
     <!-- Question 1 -->
-    <div class="container">
+    <div class="container" id="quest">
         <div class="row">
             <div class="col-md-8">
                 <div class="card w-100">
                     <div class="card-body">
-                        <h5 class="card-title" id="q1">Question #</h5>
-                        <p class="card-text">Javascript is a _______ language.
+                        <h5 class="card-title" >Question</h5>
+                        <p class="card-text" id="question-card">
                         </p>
-                        <a href="#" class="btn btn-primary">A. Markup</a>
-                        <a href="#" class="btn btn-primary">B. Foreign</a>
-                        <a href="#" class="btn btn-primary">C. Coding</a>
-                        <a href="#" class="btn btn-primary">D. Programming</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Question 2 -->
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8">
-                <div class="card w-100">
-                    <div class="card-body">
-                        <h5 class="card-title" id="q1">Question #</h5>
-                        <p class="card-text">Javascript is a _______ language.
+                        <a href="#" class="btn btn-primary" id="ans1"></a>
+                        <a href="#" class="btn btn-primary" id="ans2"></a>
+                        <a href="#" class="btn btn-primary" id="ans3"></a>
+                        <a href="#" class="btn btn-primary" id="ans4"></a>
+                        <p class="card-text" id="message">
                         </p>
-                        <a href="#" class="btn btn-primary">A. Markup</a>
-                        <a href="#" class="btn btn-primary">B. Foreign</a>
-                        <a href="#" class="btn btn-primary">C. Coding</a>
-                        <a href="#" class="btn btn-primary">D. Programming</a>
                     </div>
                 </div>
             </div>
