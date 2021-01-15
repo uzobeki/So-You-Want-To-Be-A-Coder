@@ -11,8 +11,7 @@ var ansThree = document.getElementById('ans3');
 var ansFour = document.getElementById('ans4');
 var o = 0;
 //If the answer was correct, score increases
-var score = document.querySelector("#score");
-var scoreCount = 0;
+
 //If the answer was incorrect, time decreases. User alerted when answer is correct/incorrect
 var msg = document.querySelector("#message")
 //The quiz is over when the time has run out or all questions answered
@@ -85,18 +84,17 @@ function buildQuiz(){
 
 //Code to end quiz
 function codeBreaker(){
+    window.location.href = "./highscore.html";
     userScore = {
         user:"",
         score: timeCount,
     };
-    // scoreArr = [];
+    scoreArr = [];
     scoreArr = JSON.parse(localStorage.getItem("score"))
     console.log(scoreArr);
     scoreArr.push(userScore);
     localStorage.setItem("score",JSON.stringify(scoreArr));
     console.log(userScore);
-     window.location.href = "./highscore.html";
-
 }
 //Score
 document.getElementById('ans1').addEventListener("click", function () {
@@ -110,7 +108,6 @@ document.getElementById('ans1').addEventListener("click", function () {
     o++;
     buildQuiz();
     console.log("Question #" + o);
-    console.log("Score:" + scoreCount);
 })
 
 document.getElementById('ans2').addEventListener("click", function () {
@@ -124,7 +121,6 @@ document.getElementById('ans2').addEventListener("click", function () {
     o++;
     buildQuiz();
     console.log("Question #" + o);
-    console.log("Score:" + scoreCount);
 })
 
 document.getElementById('ans3').addEventListener("click", function () {
@@ -138,7 +134,6 @@ document.getElementById('ans3').addEventListener("click", function () {
     o++;
     buildQuiz();
     console.log("Question #" + o);
-    console.log("Score:" + scoreCount);
 })
 
 document.getElementById('ans4').addEventListener("click", function () {
@@ -152,7 +147,6 @@ document.getElementById('ans4').addEventListener("click", function () {
     o++;
     buildQuiz();
     console.log("Question #" + o);
-    console.log("Score:" + scoreCount);
 })
 //Score End
 
@@ -176,10 +170,3 @@ startQuiz.addEventListener("click", function countdown(){
 
 })
 buildQuiz();
-
-//Score Storage
-function storeScore(){
-    if(codeQuest[i] === codeQuest.length){
-        scoreCount
-    }
-}

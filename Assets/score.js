@@ -3,7 +3,6 @@ buildList();
 //Get Local Storage
 scoreArr = JSON.parse(localStorage.getItem("score"))
 console.log(scoreArr);
-console.log("hello")
 //    Submit click handler
 document.getElementById("submit").addEventListener("click", function () {
     var username = userName();
@@ -21,7 +20,6 @@ document.getElementById("submit").addEventListener("click", function () {
 });
 
 //Create function to push user input into user array
-console.log("hello")
 function userName() {
     var input = document.getElementById("input");
     var inputText = input.value;
@@ -30,17 +28,15 @@ function userName() {
 
 }
 function buildList() {
-    
+
     //Create function to populate high score list
     scoreArr = JSON.parse(localStorage.getItem("score"))
     // Loop through length of the array and for each index create a li item element and assign it and give it text content of username property and score property
-    console.log("hello")
-    for (var i = 0; i < scoreArr.length; i++) {
+    for (var i = 0; i < scoreArr; i++) {
         var user = scoreArr[i].user;
         var score = scoreArr[i].score;
         var newList = document.createElement("LI");
         newList.textContent = user + score;
-        console.log("hello")
         document.getElementById("ol").appendChild(newList);
     };
     //Append list item to the ordered list
