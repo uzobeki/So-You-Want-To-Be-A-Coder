@@ -7,7 +7,12 @@ left: 55%;
     text-align: center;
 }
 
-.score {
+#scorecard {
     position: relative;
-    left: 10%;
+    left: 40%;
+}
+
+#start-button {
+    position: relative;
+    left: 35%;
 }

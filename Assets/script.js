@@ -43,13 +43,35 @@ var codeQuest = [
         question: "When coding, a group of words that are written in quotations is called _____.",
         answers: ["A. A sentence","B. An array","C. A quote","D. A string"],
         correctAns: "D. A string",
+    },
+
+    {
+        question: "Which language is used specifically for styling?",
+        answers: ["A. CSS","B. HTML","C. JavaScript","D. API"],
+        correctAns: "A. CSS",
+    },
+
+    {
+        question: ".forEach, .appendChild and .log are all examples of what?",
+        answers: ["A. Functions", "B. Arrays", "C. Methods", "D. Classes"],
+        correctAns: "C. Methods",
+    },
+
+    {
+        question: "This is the best quiz ever?",
+        answers: ["A. Nah", "B. Yes!", "C. Most Definitely", "D. 100%"],
+        correctAns: "D. 100%",
     }
 ]
 
 
 function buildQuiz(){
-    if (o === codeQuest.length) {
-        return "";
+    if (o === codeQuest.length ) {
+        codeBreaker();
+    } 
+    if (timeCount === 0){
+        alert("Quiz Over!")
+        codeBreaker();
     }
     else {
         questionCard.textContent = codeQuest[o].question;
@@ -61,18 +83,28 @@ function buildQuiz(){
 
 }
 
-// Code to end quiz
+//Code to end quiz
+function codeBreaker(){
+    userScore = {
+        user:"",
+        score: timeCount,
+    };
+    // scoreArr = [];
+    scoreArr = JSON.parse(localStorage.getItem("score"))
+    console.log(scoreArr);
+    scoreArr.push(userScore);
+    localStorage.setItem("score",JSON.stringify(scoreArr));
+    console.log(userScore);
+     window.location.href = "./highscore.html";
 
+}
 //Score
 document.getElementById('ans1').addEventListener("click", function () {
     if (codeQuest[o].answers[0] === codeQuest[o].correctAns) {
-        score.textContent = scoreCount;
-        scoreCount += 10;
         msg.textContent = "Impressive! I see great promise in you!"
     }
     else {
         timeCount -= 10;
-        scoreCount -= 5;
         msg.textContent = "This is most disappointing..."
     }
     o++;
@@ -83,13 +115,10 @@ document.getElementById('ans1').addEventListener("click", function () {
 
 document.getElementById('ans2').addEventListener("click", function () {
     if (codeQuest[o].answers[1] === codeQuest[o].correctAns) {
-        score.textContent = scoreCount;
-        scoreCount += 10;
         msg.textContent = "Good! Your knowledge know no bounds!"
     }
     else {
         timeCount -= 10;
-        scoreCount -= 5;
         msg.textContent = "I expected so much more. Maybe, you're not ready..."
     }
     o++;
@@ -100,13 +129,10 @@ document.getElementById('ans2').addEventListener("click", function () {
 
 document.getElementById('ans3').addEventListener("click", function () {
     if (codeQuest[o].answers[2] === codeQuest[o].correctAns) {
-        score.textContent = scoreCount;
-        scoreCount += 10;
         msg.textContent = "Very nice, young coder!"
     }
     else {
         timeCount -= 10;
-        scoreCount -= 5;
         msg.textContent = "Perhaps, this is too much for you....."
     }
     o++;
@@ -117,13 +143,10 @@ document.getElementById('ans3').addEventListener("click", function () {
 
 document.getElementById('ans4').addEventListener("click", function () {
     if (codeQuest[o].answers[3] === codeQuest[o].correctAns) {
-        score.textContent = scoreCount;
-        scoreCount += 10;
         msg.textContent = "Correct!"
     }
     else {
         timeCount -= 10;
-        scoreCount -= 5;
         msg.textContent = "Incorrect..."
     }
     o++;
@@ -131,7 +154,7 @@ document.getElementById('ans4').addEventListener("click", function () {
     console.log("Question #" + o);
     console.log("Score:" + scoreCount);
 })
-// Score End
+//Score End
 
 //Time
 startQuiz.addEventListener("click", function countdown(){    
@@ -153,3 +176,10 @@ startQuiz.addEventListener("click", function countdown(){
 
 })
 buildQuiz();
+
+//Score Storage
+function storeScore(){
+    if(codeQuest[i] === codeQuest.length){
+        scoreCount
+    }
+}

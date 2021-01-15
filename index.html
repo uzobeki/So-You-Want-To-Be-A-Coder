@@ -12,7 +12,17 @@
 
 <body>
     <!-- Navabr with Highscore link -->
-
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                    <div class="container-md">
+                      <a class="navbar-brand" href="./highscore.html">Highscores</a>
+                    </div>
+                  </nav>
+            </div>
+        </div>
+    </div>
     <!-- Header -->
     <div class="container">
         <div class="row">
@@ -26,7 +36,7 @@
     <div class="container score-time">
         <div class="row">
             <div class="col-sm-3">
-                <div class="card w-50">
+                <div class="card w-50" id="scorecard">
                     <div class="card-body">
                         <h5 class="card-title">Score</h5>
                         <h6 class="card-text"><span id="score">0</span></h6> 
@@ -51,7 +61,7 @@
                 <div class="card w-100">
                     <div class="card-body" >
                         <h5 class="card-title">Test Your Knowledge!</h5>
-                        <p class="card-text">Welcome promising coder! So you want to be a coder, huh? Today we will test your know knowledge on coding basics. You will have 90 seconds to answer as many questions as possible. For every question you get wrong, your time will decrease by 10 seconds and your score by 5. So, are you a Javascript Jedi? An HTML Hero?! A CSS Champion?!!!<br> We'll see...
+                        <p class="card-text">Welcome promising coder! So you want to be a coder, huh? Today we will test your know knowledge on coding basics. You will have 90 seconds to answer as many questions as possible. For every question you get wrong, your time will decrease by 10 seconds and your score by 5. So, are you a Javascript Jedi? An HTML Hero?! A CSS Champion?!!!<br><br> We'll see...
                         </p>
                         <a class="btn btn-primary" id="start-button">Start Quiz</a>
                     </div>
