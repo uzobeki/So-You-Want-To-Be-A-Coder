@@ -10,7 +10,7 @@ var ansTwo = document.getElementById('ans2');
 var ansThree = document.getElementById('ans3');
 var ansFour = document.getElementById('ans4');
 var o = 0;
-//If the answer was correct, score increases
+
 
 //If the answer was incorrect, time decreases. User alerted when answer is correct/incorrect
 var msg = document.querySelector("#message")
@@ -85,6 +85,7 @@ function buildQuiz(){
 //Code to end quiz
 function codeBreaker(){
     window.location.href = "./highscore.html";
+    
     userScore = {
         user:"",
         score: timeCount,

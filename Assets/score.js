@@ -13,7 +13,6 @@ document.getElementById("submit").addEventListener("click", function () {
     console.log(scoreArr);
     //Stringify array and add to local storage
     localStorage.setItem("score",JSON.stringify(scoreArr));
-    //Disable input box
 
     //Call populate high score function
     buildList();
